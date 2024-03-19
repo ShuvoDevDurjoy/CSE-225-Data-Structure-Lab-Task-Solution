@@ -65,22 +65,20 @@ void SortedType<ItemType>::InsertItem(ItemType item)
 {
     int location = 0; 
     bool moreToSearch = (location < length);
-    while(moreToSearch){
-        if(info[location] < item){
-            location++;
-            moreToSearch = (location < length);
+    while (moreToSearch)
+    {
+    if(info[location]<item)
+    {
+    location++;
+    moreToSearch = (location < length);
         }
-        else{
-            moreToSearch = false;
-        }
+    else if(item < info[location])
+    moreToSearch = false;
     }
-
-    for (int index = length; index > location; index--){
-        info[index] = info[index - 1];
-    }
-
-    info[location] = item; 
-    length++; 
+    for (int index = length; index > location; index--)
+    info[index] = info[index - 1];
+    info[location] = item;
+    length++;
 }
 
 template <class ItemType>
