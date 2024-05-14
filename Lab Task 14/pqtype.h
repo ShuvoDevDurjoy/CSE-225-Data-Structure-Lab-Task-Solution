@@ -1,7 +1,7 @@
 #ifndef PQTYPE_H_INCLUDED
 #define PQTYPE_H_INCLUDED
-#include "lab.h"
-#include "lab.cpp"
+#include "heaptype.h"
+#include "heaptype.cpp"
 class FullPQ
 {};
 class EmptyPQ
